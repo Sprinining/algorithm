@@ -1,0 +1,51 @@
+// 这个文件用于配置调试器的启动选项。
+// 它定义了 VS Code 中如何启动调试会话，包括要调试的程序路径、调试器类型、是否打开终端等。
+// 使用的是 `cppdbg` 类型调试器，适配 GCC (MinGW) 和 GDB。
+{
+    // IntelliSense 支持的配置版本号，固定为 0.2.0
+    "version": "0.2.0",
+
+    // configurations 数组可以配置多个调试方案
+    "configurations": [
+        {
+            "name": "Debug", // 调试配置的名称，会显示在调试配置选择框中
+            "type": "cppdbg", // 使用的调试器类型（适用于 GCC/GDB）
+            "request": "launch", // 启动模式为 launch，也可以用 attach 附加到已有进程
+
+            // 要调试的可执行文件路径：当前文件所在目录 + 当前文件名（不含扩展名）+ .exe
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+
+            "args": [], // 调试时传递给程序的命令行参数，可留空或填写参数列表
+
+            "stopAtEntry": false, // 是否在程序入口处暂停调试（false 表示直接运行）
+
+            "cwd": "${fileDirname}", // 设置程序的工作目录为当前文件所在目录
+
+            "environment": [], // 可添加环境变量，如 { "name": "VAR", "value": "123" }
+
+            "externalConsole": false, // 是否使用外部终端窗口（false 表示在 VS Code 的内部调试控制台运行）
+
+            "MIMode": "gdb", // 使用 GDB 作为调试器（MinGW 默认）
+
+            // 指定 gdb 的路径，根据你的 MinGW 安装路径填写
+            "miDebuggerPath": "E:\\MinGW\\mingw64\\bin\\gdb.exe",
+
+            // GDB 启动时预设的一些命令
+            "setupCommands": [
+                {
+                    "description": "启用 GDB 的 pretty-printing（美化显示 STL 对象）",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "将反汇编风格设置为 Intel（更易读）",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+
+            // 调试前执行的任务名，对应 tasks.json 中的 "label"
+            "preLaunchTask": "task g++"
+        }
+    ]
+}

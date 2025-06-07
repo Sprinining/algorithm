@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Win32", // 配置名称，任意命名，用于标识该配置
+            "includePath": [
+                "${workspaceFolder}/**" // 指定头文件搜索路径，** 表示递归包含当前项目文件夹下所有子目录
+            ],
+            "defines": [
+                "_DEBUG",       // 定义 _DEBUG 宏，通常用于调试模式编译
+                "UNICODE",      // 定义 UNICODE 宏，用于启用 Windows 下的 Unicode API
+                "_UNICODE"      // 定义 _UNICODE 宏，用于配合 UNICODE 宏使用
+            ],
+            "windowsSdkVersion": "10.0.22621.0", // 指定 Windows SDK 版本（IntelliSense 用，MinGW 可忽略）
+            "compilerPath": "E:/MinGW/mingw64/bin/g++.exe", // 设置你本地安装的 g++ 编译器路径
+            "cStandard": "c17",        // 指定 C 语言标准，这里使用 C17
+            "cppStandard": "c++20",    // 指定 C++ 语言标准为 C++20
+            "intelliSenseMode": "windows-gcc-x64" // 设置 IntelliSense 的模式为 Windows + GCC 64 位
+        }
+    ],
+    "version": 4 // 配置文件版本，固定为 4，不需要改动
+}
