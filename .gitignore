@@ -1,0 +1,32 @@
+# VSCode 配置文件夹
+.vscode/
+
+# C++ 编译产物
+/build/
+/bin/
+/Debug/
+/Release/
+
+# C++ 临时文件
+*.obj
+*.o
+*.a
+*.lib
+*.so
+*.dll
+*.exe
+*.pdb
+
+# 日志和临时文件
+*.log
+*.tmp
+*.temp
+*.swp
+*~
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# VSCode 工作区文件
+*.code-workspace
