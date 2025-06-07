@@ -1,6 +1,3 @@
-# VSCode 配置文件夹
-.vscode/
-
 # C++ 编译产物
 /build/
 /bin/
