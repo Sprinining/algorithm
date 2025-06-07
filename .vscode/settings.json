@@ -7,43 +7,34 @@
         "iostream": "cpp",
         "map": "cpp",
         "set": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "random": "cpp"
     },
-
     // 保存时自动格式化代码（需要安装 C++ 格式化插件，如 clang-format）
     "editor.formatOnSave": true,
-
     // 缩进使用空格，长度为4个空格
     "editor.insertSpaces": true,
     "editor.tabSize": 4,
-
     // 显示行号
     "editor.lineNumbers": "on",
-
     // 代码自动补全时自动弹出提示
     "editor.quickSuggestions": {
         "other": true,
         "comments": false,
         "strings": true
     },
-
     // 启用代码片段建议
     "editor.snippetSuggestions": "inline",
-
     // C++ 语言配置（可根据你的编译器路径调整）
     "C_Cpp.default.cppStandard": "c++20",
     "C_Cpp.default.intelliSenseMode": "windows-gcc-x64",
     "C_Cpp.default.compilerPath": "E:/MinGW/mingw64/bin/g++.exe",
-
     // 允许 IntelliSense 跟踪头文件的自动更新，提升体验
     "C_Cpp.autocomplete": "default",
-
     // 显示错误和警告
     "C_Cpp.errorSquiggles": "enabled",
-
     // 控制台字体大小
     "terminal.integrated.fontSize": 14,
-
     // 保存时自动修剪行尾空白
     "files.trimTrailingWhitespace": true
 }
